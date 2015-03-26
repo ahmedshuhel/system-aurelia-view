@@ -9,11 +9,18 @@
 </head>
 
 <body>
+
+
+ <div id="templateHost">
+
+ </div>
+
   Wait a few seconds...
   <script>
     System.import('test-template!view')
       .then(function(t) {
-        document.body.innerHTML = t;
+         var host = document.getElementById('templateHost');
+         host.innerHTML = t;
       })
       .catch(function(err) {
         console.log('ERROR: ', err);
