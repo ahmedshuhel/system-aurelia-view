@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Aurelia View SystemJS Plugin</title>
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+</head>
+
+<body>
+  Wait a few seconds...
+  <script>
+    System.import('test-template!view')
+      .then(function(t) {
+        document.body.innerHTML = t;
+      })
+      .catch(function(err) {
+        console.log('ERROR: ', err);
+      });
+  </script>
+</body>
+
+</html>
